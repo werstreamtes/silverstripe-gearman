@@ -20,7 +20,7 @@ class GearmanJobTask extends BuildTask
         }
         
         $ser = trim(base64_decode($data));
-        if (!$ser || $ser{0} != 'a') {
+        if (!$ser || $ser[0] != 'a') {
             echo "Invalid data: $ser";
             return;
         }
